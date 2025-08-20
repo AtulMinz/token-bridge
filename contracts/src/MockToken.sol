@@ -7,8 +7,6 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MockToken is ERC20, Ownable {
 
-    error BridgeContract__Transaction_Failed();
-
     constructor () ERC20 ("MockToken", "MT") Ownable (msg.sender) {
         _mint(msg.sender, 1_000_000 * 10 ** decimals());
     }
