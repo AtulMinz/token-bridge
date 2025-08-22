@@ -1,0 +1,124 @@
+export const ABI = {
+  abi: [
+    { type: "constructor", inputs: [], stateMutability: "nonpayable" },
+    {
+      type: "function",
+      name: "bridge",
+      inputs: [
+        {
+          name: "_tokenAddress",
+          type: "address",
+          internalType: "contract IERC20",
+        },
+        { name: "_amount", type: "uint256", internalType: "uint256" },
+      ],
+      outputs: [],
+      stateMutability: "nonpayable",
+    },
+    {
+      type: "function",
+      name: "nonce",
+      inputs: [],
+      outputs: [{ name: "", type: "uint256", internalType: "uint256" }],
+      stateMutability: "view",
+    },
+    {
+      type: "function",
+      name: "owner",
+      inputs: [],
+      outputs: [{ name: "", type: "address", internalType: "address" }],
+      stateMutability: "view",
+    },
+    {
+      type: "function",
+      name: "redeem",
+      inputs: [
+        {
+          name: "_tokenAddress",
+          type: "address",
+          internalType: "contract IERC20",
+        },
+        { name: "_to", type: "address", internalType: "address" },
+        { name: "_amount", type: "uint256", internalType: "uint256" },
+        { name: "_nonce", type: "uint256", internalType: "uint256" },
+      ],
+      outputs: [],
+      stateMutability: "nonpayable",
+    },
+    {
+      type: "function",
+      name: "renounceOwnership",
+      inputs: [],
+      outputs: [],
+      stateMutability: "nonpayable",
+    },
+    {
+      type: "function",
+      name: "transferOwnership",
+      inputs: [{ name: "newOwner", type: "address", internalType: "address" }],
+      outputs: [],
+      stateMutability: "nonpayable",
+    },
+    {
+      type: "event",
+      name: "Bridge",
+      inputs: [
+        {
+          name: "",
+          type: "address",
+          indexed: false,
+          internalType: "contract IERC20",
+        },
+        { name: "", type: "uint256", indexed: false, internalType: "uint256" },
+        { name: "", type: "address", indexed: false, internalType: "address" },
+      ],
+      anonymous: false,
+    },
+    {
+      type: "event",
+      name: "OwnershipTransferred",
+      inputs: [
+        {
+          name: "previousOwner",
+          type: "address",
+          indexed: true,
+          internalType: "address",
+        },
+        {
+          name: "newOwner",
+          type: "address",
+          indexed: true,
+          internalType: "address",
+        },
+      ],
+      anonymous: false,
+    },
+    {
+      type: "event",
+      name: "Redeem",
+      inputs: [
+        {
+          name: "",
+          type: "address",
+          indexed: false,
+          internalType: "contract IERC20",
+        },
+        { name: "", type: "address", indexed: false, internalType: "address" },
+        { name: "", type: "uint256", indexed: false, internalType: "uint256" },
+      ],
+      anonymous: false,
+    },
+    { type: "error", name: "Bridge___Insufficient_Allowance", inputs: [] },
+    { type: "error", name: "Bridge___Transaction_Failed", inputs: [] },
+    {
+      type: "error",
+      name: "OwnableInvalidOwner",
+      inputs: [{ name: "owner", type: "address", internalType: "address" }],
+    },
+    {
+      type: "error",
+      name: "OwnableUnauthorizedAccount",
+      inputs: [{ name: "account", type: "address", internalType: "address" }],
+    },
+  ],
+};
